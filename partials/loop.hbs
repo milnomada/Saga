@@ -4,7 +4,7 @@
         {{#if feature_image}}
         <a href="{{url}}" class="post-image">
             <img src="{{feature_image}}" alt="">
-            <h2 class="post-title">{{{title}}}</h2>
+            <h2a class="post-title">{{{title}}}</h2>
         </a>{{else}}
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         {{/if}}
@@ -13,7 +13,7 @@
         </section>
         <section class="post-meta">
             <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
-            {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}}
+            {{#primary_author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/primary_author}}
             {{#if tags}}<span class="tags"><i class="fa fa-tags"></i>
                 <span>
                 {{tags prefix="" separator=", "}}</span>
